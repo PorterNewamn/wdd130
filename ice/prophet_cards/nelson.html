@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russell M. Nelson</title>
+    <style>
+        /* Insert styles here, this is called an internal stylesheet  */
+        @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+        body {
+            background: #FFECD7;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        img {
+            width: 200px;
+            display: block;
+            margin: 0 auto;
+            border: 4px solid white
+        }
+        h1 {
+            color: white;
+            margin: -20px;
+        }
+        #container{
+            grid-column: 2;
+            background-color: #008db1;
+            border-radius: 20px;
+            border: 4px solid black;
+            padding: 15px;
+            width: 275px;
+            margin: 0 auto;
+            align-items: center;
+            text-align: center;
+            font-family: Helvetica;
+        }
+        .textbulet{
+            display: inline-block;
+            text-align: left;
+            color: white;
+        }
+        .quote{
+            color: #ffd783;
+            font-size: 12px;
+            font-family: "Shadows Into Light", cursive;
+            font-weight: 2000;
+            font-style: normal;
+        }
+        #link{
+            text-decoration: none;
+            color: #91e4fb;
+        }
+        .info{
+            padding: -40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>
+            <p>
+                Russell M. Nelson
+            </p>
+        </h1>
+        <section class="info">
+            <a id="link" href="https://www.churchofjesuschrist.org/?lang=eng"> 17th president of the Church of Jesus Christ of Latter-day Saints</a>
+        </section>
+        <a id="picture">
+                <img class="picture" src="images/russell_nelson.png" alt="Picture of the Prophet">
+        </a>
+        <section class="textbulet">
+            <ul>
+                <li> Born: Sep 9, 1924</li>
+                <li> Apostle: Apirl 7, 1984</li>
+                <li> Prophet: Jan 14, 2018</li>
+            </ul>
+        </section>
+        <section class="quote">
+            <h2>
+                "I urge you to devote time each week—
+                for the rest of your life—
+                to increase your understanding of the Atonement of Jesus Christ.""
+            </h2>
+        </section>
+    </div>
+</body>
+</html>
