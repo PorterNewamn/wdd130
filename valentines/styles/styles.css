@@ -1,0 +1,96 @@
+@keyframes myAnimation {
+  from {background-color: rgb(224, 127, 127); border-radius: 10px;}
+  to {background-color: rgb(140, 29, 21); border-radius: 10px;}
+}
+
+header {
+    text-align: center;
+    background-color: #b73535;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+nav li{
+    background-color: #b73535;
+    display: inline;
+    padding: 5px 5%;
+    font-size: 20px;
+}
+
+h1 {
+    background-color: pink;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    grid-column: 2;
+    animation-name: myAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    background-color: rgb(97, 17, 12); 
+    border-radius: 10px;
+    animation-timing-function: ease-in-out;
+}
+
+body{
+    background-color: pink;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+img{
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    width: 100%;
+    grid-column: span 3;
+    border: 10px;
+
+}
+div{
+  max-width: 1600px;
+  grid-template-columns: 1fr 100fr 1fr;
+  grid-column: 2;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+nav li:hover{
+    background-color: #8a0f0f;
+    color: white;
+    border-radius: 10px;
+}
+
+.card1{
+    background-color: #b73535;
+    border-radius: 10px;
+    grid-column: 1;
+    padding: 5px;
+    margin: 5px;
+}
+
+.card2{
+    background-color: #b73535;
+    border-radius: 10px;
+    grid-column: 2;
+    padding: 5px;
+    margin: 5px;
+}
+
+.card3{
+    background-color: #b73535;
+    border-radius: 10px;
+    grid-column: 3;
+    padding: 5px;
+    margin: 5px;
+}
+.card3 h2{
+    text-align: center;
+}
+
+.card2 h2{
+    text-align: center;
+}
+
+.card1 h2{
+    text-align: center;
+}
