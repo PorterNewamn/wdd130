@@ -1,5 +1,9 @@
 body{
-    background-color: #EFF1ED;
+    background-image: url('/outbound/image/cartoonBackgroun.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     max-width: 1600px;
     margin: auto;
 }
@@ -11,6 +15,7 @@ header{
     border: #717744;
     display: grid;
     grid-template-columns: 200px auto;
+    border-bottom: 10px solid #717744;
 }
 .logo{
     width: 120px;
@@ -26,22 +31,21 @@ nav{
     text-decoration: none;
     padding: 25px;
     justify-content: space-around;
+    border-radius: 10px;
 }
 nav a:hover{
     background-color: #1c170e;
     color: #717744;
-    border-radius: 10px;
-    padding: 10px;
 }
 
 .BakcPack{
     grid-column: 1/4;
     grid-row: 1 / 5;
-    margin-top: 100px;
-    text-align: center;
+    object-fit: cover;
     width: 100%;
     object-fit: cover;
     z-index: -1;
+    border-bottom: 30px solid #1c170e;
 }
 #image_message{
     display: grid;
@@ -61,18 +65,21 @@ nav a:hover{
     grid-template-rows: repeat(10, 1fr);
 }
 #cards{
-    margin-top: 800px;
+    background-color: rgba(239, 241, 237, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 1000px;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 40px;                             
-    grid-column: 2 / 13;   
-    grid-row: 3;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;          
 }
 
 .climbing-card img, 
 .camping-card img, 
 .backpacking-card img{
     width: 100%;
+    text-align: center;
+    height: 300px;
     display: block;
     object-fit: cover;
     border: 10px solid #373D20;
@@ -80,14 +87,12 @@ nav a:hover{
     box-shadow: 5px 5px 10px #6f7364;
 }
 
-.climbing-card img{
-    grid-column: 2;
+#cards h2{
+    text-align: center;
 }
 
-.camping-card img{
-    grid-column: 4;
+#cards h3{
+    text-align: center;
+    font-size: 40px;
 }
 
-.backpacking-card img{
-    grid-column: 6;
-}

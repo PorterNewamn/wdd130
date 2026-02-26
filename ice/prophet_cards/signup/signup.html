@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Feed Sign Up</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+        #head{
+            position: relative;
+            background-color: white;
+        }
+        h2{
+            position: absolute;
+            top: 80px;
+            left: 130px;
+            font-size: 40px;
+            color: rgb(253, 251, 251);
+            text-shadow: 2px 2px black;
+        }
+
+        h3{
+            position: absolute;
+            top: 156px;
+            left: 90px;
+            font-size: 20px;
+            color: rgb(14, 9, 9);
+        }
+
+        #christpicture{
+        height: 150px;
+        width: 500px;
+        z-index: -1;
+        object-fit: cover;
+        object-position: 50% 20%
+        }
+        #script{
+            display: flex;
+            gap: 20%;
+            width: 20px;
+            height: 117px;
+            top: 550px;
+        }
+
+        body {
+            background: rgb(120, 96, 64);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #formContainer{
+            background-color: white;
+            border: 8px solid blue;
+            max-width: 450px;
+            border-radius: 25px;
+            position: absolute;
+            top: 70px;
+            overflow: hidden;
+        }
+
+        #myForm{
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+       #myForm > div{ 
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+       }
+
+       #checksub, #checkack
+       {
+        display: flex;
+        justify-content: right;
+        margin-left: 100px 0;
+        align-items: center;
+       }
+        #sub{
+            display: flex;
+            justify-content: center;
+        }
+
+        #closeBtn{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div id="formContainer">
+        <img id="christpicture" src="images/jesus_feeds_5000.jpeg" alt="Jesus">
+        <h2>Daily Feed</h2>
+        <h3>Sign Up for Daily Scripture Feed</h3>
+        <button type="button" id="closeBtn">X</button>
+        <form id="myForm">
+            <div id="user">
+                <label for="username">User Name:</label>
+                <div class="userb">
+                <input type="text" id="username" name="username" required>
+                </div>
+            </div>
+            <div id="pass">
+                <label for="password">Password:</label>
+                <div class="passb">
+                <input type="password" id="password" name="password" required>
+                </div>
+            </div>
+            <div id="email">
+                <label for="email">Email:</label>
+                <div class="mailb">
+                <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            <div id="sex">
+            <label>Gender:</label>
+                <div class="feb">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div id="checksub">
+                <section>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to newsletter</label>
+                </section>
+            </div>
+            <div id="checkack">
+                <section>
+                    <input type="checkbox" id="conditions" name="conditions" required>
+                    <label for="conditions">I acknowledge the terms and conditions</label>
+                </section>
+            </div>
+            <div id="sub">
+                <section>
+                    <button type="submit">Submit</button>
+                </section>
+            </div>
+        </form>
+        <div id="script">
+            <img class="old" src="images/old_testament.webp" alt="oldt">
+            <img class="new" src="images/new_testament.webp" alt="newt">
+            <img class="book" src="images/book_of_mormon.webp" alt="BOM">
+            <img class="dc" src="images/doctrine_and_covenants.webp" alt="dc">
+            <img class="pearl" src="images/pearl_of_great_price.webp" alt="pearl">
+        </div>
+    </div>
+    <div id="output"></div>
+    <script>
+        // Here is some Javascript to start looking forward to wdd131
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("formContainer").style.display = "none";
+         });
+        const form = document.getElementById('myForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Stop form from actually submitting
+
+            const formData = new FormData(form);
+            const entries = [];
+
+            for (const [key, value] of formData.entries()) {
+                if (key == "password") {
+                    entries.push(`<strong>${key}</strong>: ${value} (you should probably encrypt the password)`);
+                } else {
+                    entries.push(`<strong>${key}</strong>: ${value}`);
+                }
+            }
+
+            output.innerHTML = `
+            <br>  
+            <h3>Here is the data that would be sent to the server:</h3>
+            <ul>
+                ${entries.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+            `;
+                });
+    </script>
+</body>
+
+</html>
