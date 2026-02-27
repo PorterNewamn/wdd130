@@ -19,13 +19,14 @@ header{
     grid-template-columns: max-content auto;
     align-items: center;
     border-bottom: 10px solid #717744;
-    padding: 10px;
+    box-sizing: border-box;;
 }
 header .logo{
     width: 120px;
     height: auto;
-    margin-left: 40px;
+    margin-left: 20px;
     display: block;
+    object-fit: contain;
 }
 
 header nav{
@@ -34,7 +35,7 @@ header nav{
     text-decoration: none;
     justify-content: space-around;
     background-color: #373D20;
-    padding: 40px;
+    padding: 20px;
     border-radius: 10px;
     
 }
@@ -48,7 +49,7 @@ header nav a{
     padding: 10px 20px;
     transition: 0.3s;
     text-decoration: none;
-     cursor: pointer;
+    cursor: pointer;
 }
 header nav a:hover{
     background-color: #d9d59c;
