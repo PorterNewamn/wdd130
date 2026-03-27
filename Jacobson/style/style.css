@@ -120,6 +120,10 @@ body nav a:hover{
     margin: 40px auto;
 }
 
+#cards a{
+    text-decoration: none;
+}
+
 #cards section{
     border: 3px solid #140d0d;
     background-color: rgb(244, 242, 241);
@@ -154,7 +158,6 @@ body nav a:hover{
     position: absolute;
     width: 70%; 
     height: auto;
-    border-radius: 8px;
 }
 
 .bottom-card {
@@ -178,12 +181,14 @@ body nav a:hover{
     height: 200px;       
     object-fit: contain;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 
 #cards h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
     font-family: "Rock Salt", cursive;
+    text-decoration: none;
 }
 
 #cards h2 {
@@ -191,6 +196,7 @@ body nav a:hover{
     color: #333;
     font-weight: normal;
     font-family: "Roboto", sans-serif;
+    text-decoration: none;
 }
 
 footer{
