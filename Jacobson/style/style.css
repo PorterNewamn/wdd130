@@ -1,7 +1,11 @@
 body{
-    max-width: 1600px;
     margin: 0;
     background-color: antiquewhite;
+}
+
+#rapper{
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 header{
